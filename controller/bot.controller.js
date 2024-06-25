@@ -2,7 +2,7 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require("dotenv").config();
 
-const configuration = new GoogleGenerativeAI('AIzaSyDvuEZFtlcag7f-h5rIpojcGnbyBYEjVXQ');
+const configuration = new GoogleGenerativeAI(process.env.OPENAI_API_KEY);
 
 const modelId = "gemini-pro";
 const model = configuration.getGenerativeModel({ model: modelId });
